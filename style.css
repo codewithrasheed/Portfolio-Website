@@ -1,0 +1,13 @@
+*{
+    font-family: 'Comic Sans MS';
+    box-sizing: border-box;
+}
+
+#preloader {
+    background: #111827 no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
