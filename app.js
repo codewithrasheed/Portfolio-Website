@@ -7,7 +7,7 @@ window.addEventListener(
     window.removeEventListener("load", load, false);
     setTimeout(function () {
       loader.style.display = "none";
-    }, 2000);
+    }, 1200);
 },
   false
 );
@@ -20,3 +20,14 @@ let type = new Typed(".auto-typed", {
     loop: true,
     smartBackspace: true  
 });
+
+const lenis = new Lenis({
+  duration: 1.5,
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

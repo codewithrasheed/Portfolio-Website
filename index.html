@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
     <link rel="shortcut icon" href="./Image/favicon1.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <title>Rasheed Ahmed</title>
   </head>
   <body class="bg-gray-900">
     
-    <!-- Loader Open -->
-
+    <!-- Loader Open --> 
     <div id="preloader">
       <h1 class="text-white flex justify-center h-screen items-center text-4xl animate-bounce">< Rasheed Ahmed / ></h1>
     </div>
-
     <!-- Loader CLose -->
 
     <!-- Header Open -->
@@ -28,7 +27,7 @@
         class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
         bis_skin_checked="1"
       >
-        <a
+        <a href="/"
           class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
         >
           <svg
@@ -50,7 +49,7 @@
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a href="/" class="mr-5 hover:text-white">HOME</a>
+          <a href="/#home" class="mr-5 hover:text-white">HOME</a>
           <a href="/#about" class="mr-5 hover:text-white">ABOUT</a>
           <a href="/#education" class="mr-5 hover:text-white">EDUCATION</a>
           <a href="/#skills" class="mr-5 hover:text-white">SKILLS</a>
@@ -62,7 +61,7 @@
     <!-- Header Close -->
 
     <!-- home Open -->
-    <section class="text-gray-400 bg-gray-900 body-font">
+    <section id="home" class="text-gray-400 bg-gray-900 body-font">
       <div
         class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
       >
@@ -70,7 +69,7 @@
           class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
         >
           <h1
-            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white"
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white typing-text"
           >
             Rasheed Ahmed
           </h1>
@@ -926,15 +925,22 @@
     </footer>
     <!-- Footer Close -->
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  chat-icon="https:&#x2F;&#x2F;cdn-icons-png.freepik.com&#x2F;512&#x2F;81&#x2F;81117.png"
-  intent="WELCOME"
-  chat-title="Rasheed&#x27;s-Assistant"
-  agent-id="3f3045f9-f185-4ed1-bc7e-12b66c19866e"
-  language-code="en"
-></df-messenger>
 
+    <!-- lenis open -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <!-- lenis close -->
+     
+    <!-- Chatbot Open -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+    chat-icon="https:&#x2F;&#x2F;cdn-icons-png.freepik.com&#x2F;512&#x2F;81&#x2F;81117.png"
+    intent="WELCOME"
+    chat-title="Rasheed&#x27;s-Assistant"
+    agent-id="3f3045f9-f185-4ed1-bc7e-12b66c19866e"
+    language-code="en"
+    ></df-messenger>
+    <!-- Chatbot Close -->
+    
 
 
 </body>
