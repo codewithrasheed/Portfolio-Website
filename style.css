@@ -12,3 +12,21 @@
     position: fixed;
     z-index: 100;
 }
+
+@media screen and (max-width: 600px) {
+    body, html {
+        overflow: hidden;
+
+    }   
+}
+
+#home {
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 1500ms;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  

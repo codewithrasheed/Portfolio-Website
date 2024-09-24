@@ -3,11 +3,10 @@ var loader = document.getElementById("preloader");
 window.addEventListener(
   "load",
   function (load) {
-    // loader.style.display = "none"
     window.removeEventListener("load", load, false);
     setTimeout(function () {
       loader.style.display = "none";
-    }, 1200);
+    }, 1100);
 },
   false
 );
@@ -31,3 +30,6 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+
+let scrolleml = document.getElementById('fadeleft');
+
