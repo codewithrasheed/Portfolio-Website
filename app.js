@@ -33,3 +33,6 @@ requestAnimationFrame(raf)
 
 let scrolleml = document.getElementById('fadeleft');
 
+const handleSubmit = () => {
+  alert('Message Sent Successfully')
+}
