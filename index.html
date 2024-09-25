@@ -778,16 +778,18 @@
         <div data-aos="zoom-in" class="lg:w-1/2 md:w-2/3 mx-auto">
 
           <div>
-            <form action="https://formsubmit.co/rasheedahmed4845@gmail.com" method="POST" class="flex flex-wrap -m-2">
+            <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="name" class="leading-7 text-sm text-gray-400"
                   >Name</label
                 >
+                <input type="hidden" name="access_key" value="76577657-0210-44f1-8ad8-57dae8324a10">
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  required
                   class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -801,6 +803,7 @@
                   type="email"
                   id="email"
                   name="email"
+                  required
                   class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -813,6 +816,7 @@
                 <textarea
                   id="message"
                   name="message"
+                  required
                   class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
@@ -820,7 +824,6 @@
             <div class="p-2 w-full">
               <button
               type="submit"
-              onsubmit="handleSubmit"
                 class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               >
                 SUBMIT
