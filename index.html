@@ -32,7 +32,7 @@
 
     <!-- Header Open -->
     <header
-      class="text-gray-400 bg-gray-900 body-font fixed w-full z-10 top-0 left-0"
+      class="text-gray-400 bg-gray-900 body-font fixed w-full z-10 top-0 left-0 desktop-nav"
     >
       <div
         class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
@@ -57,6 +57,50 @@
         </nav>
       </div>
     </header>
+
+   
+
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 mobile-nav fixed w-full z-10">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a
+          href="/"
+          class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+        >
+          <img src="./Image/RA Portfolio logo.png" width="60" alt="RA Logo" />
+          <span class="ml-3 text-xl">< Rasheed Ahmed / ></span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden  w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="/#home" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">HOME</a>
+            </li>
+            <li>
+              <a href="/#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">ABOUT</a>
+            </li>
+            <li>
+              <a href="/#education" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">EDUCATION</a>
+            </li>
+            <li>
+              <a href="/#skills" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">SKILLS</a>
+            </li>
+            <li>
+              <a href="/#services" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">SERVICES</a>
+            </li>
+            <li>
+              <a href="/#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     <!-- Header Close -->
 
     <!-- home Open -->
@@ -1151,14 +1195,98 @@
     <!-- Aos Close -->
 
     <!-- Chatbot Open -->
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
     chat-icon="https:&#x2F;&#x2F;cdn-icons-png.flaticon.com&#x2F;512&#x2F;81&#x2F;81117.png"
       intent="WELCOME"
       chat-title="Rasheed Ahmed"
       agent-id="3f3045f9-f185-4ed1-bc7e-12b66c19866e"
       language-code="en"
-    ></df-messenger>
+    ></df-messenger> -->
+
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+      Chatbot.init({
+          chatflowid: "b0c28509-fdab-431d-a20d-d70c5d72302b",
+          apiHost: "https://flowise-production-6fa9.up.railway.app",
+          chatflowConfig: {
+              // topK: 2
+          },
+          theme: {
+              button: {
+                  backgroundColor: "#3B81F6",
+                  right: 20,
+                  bottom: 20,
+                  size: 48, // small | medium | large | number
+                  dragAndDrop: true,
+                  iconColor: "white",
+                  customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                  autoWindowOpen: {
+                      autoOpen: true, //parameter to control automatic window opening
+                      openDelay: 2, // Optional parameter for delay time in seconds
+                      autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+                      },
+              },
+              tooltip: {
+                  showTooltip: true,
+                  tooltipMessage: 'Hi There 👋!',
+                  tooltipBackgroundColor: 'black',
+                  tooltipTextColor: 'white',
+                  tooltipFontSize: 16,
+              },
+              chatWindow: {
+                  showTitle: true,
+                  title: "Rasheed Ahmed's Bot",
+                  titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                  showAgentMessages: true,
+                  welcomeMessage: 'Hello! Welcome to Rasheed Ahmed\'s Portfolio. How can I help you today?',
+                  errorMessage: 'This is a custom error message',
+                  backgroundColor: "#ffffff",
+                  backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+                  height: 700,
+                  width: 400,
+                  fontSize: 16,
+                  //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+                  starterPromptFontSize: 15,
+                  clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+                  botMessage: {
+                      backgroundColor: "#f7f8ff",
+                      textColor: "#303235",
+                      showAvatar: true,
+                      avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                  },
+                  userMessage: {
+                      backgroundColor: "#3B81F6",
+                      textColor: "#ffffff",
+                      showAvatar: true,
+                      avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                  },
+                  textInput: {
+                      placeholder: 'Type your question',
+                      backgroundColor: '#ffffff',
+                      textColor: '#303235',
+                      sendButtonColor: '#3B81F6',
+                      maxChars: 50,
+                      maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                      autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                      sendMessageSound: true,
+                      // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                      receiveMessageSound: true,
+                      // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
+                  },
+                  feedback: {
+                      color: '#303235',
+                  },
+                  footer: {
+                      textColor: '#303235',
+                      text: 'Powered by',
+                      company: 'Rasheed Ahmed',
+                      companyLink: 'https://linktr.ee/rasheed_ahmed',
+                  }
+              }
+          }
+      })
+  </script>
     <!-- Chatbot Close -->
   </body>
 </html>

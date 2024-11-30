@@ -13,7 +13,7 @@ window.addEventListener(
 
 
 let type = new Typed(".auto-typed", {
-    strings: ["Web Developer", "Frontend Developer", "Programmer"],
+    strings: ["Mern Stack Developer", "Frontend Developer", "Web Designer", "Freelancer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
@@ -34,3 +34,4 @@ requestAnimationFrame(raf)
 // const handleSubmit = () => {
 //   alert('Message Sent Successfully')
 // }
+
